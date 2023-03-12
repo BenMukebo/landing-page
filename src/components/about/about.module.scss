@@ -1,0 +1,135 @@
+@import '../../assets/scss/variable';
+@import '../../assets/scss/mixins';
+
+.about_section {
+  width: 100%;
+  background: url('../../assets/images/about-bg.jpg') top right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.articles_wrapper {
+  padding: 4rem 0;
+}
+
+.article {
+  width: 100%;
+  padding: 2rem 1rem;
+  @include d-flex(space-around, normal);
+  flex-direction: column;
+  row-gap: 2rem;
+  
+  .article_content {
+    width: 100%;
+  
+    .article_title {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center; 
+      color: $primary-color;
+      font-size: 1.3rem;
+      font-weight: 700;
+      padding-bottom: 1rem;
+
+      &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        max-width: 100px;
+        height: 2px;
+        background-color: $secondary-color;
+        margin: 1rem auto 0;
+      }
+    }
+  
+  
+    .article_text {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  .article_img {
+    width: 100%;
+    min-height: 200px;
+    height: 25vh;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+@include media(480px) {
+  .article {
+    padding: 2rem 5%;
+    .article_img {
+      min-height: 300px;
+      height: 35vh;
+    }
+  }
+
+}
+
+@include media(768px) {
+  .article {
+    flex-direction: row;
+
+    .article_content {
+      width: 45%;
+      max-width: 580px;
+  
+      .article_title {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 0 0.2rem;
+        text-align: left;
+
+        &::after{
+          content: '';
+          display: block;
+          margin: 0.5rem 0 0;
+        }
+      }
+    }
+
+    .article_img {
+      width: 45%;
+      min-height: 200px;
+      max-width: 580px;
+      height: 25vh;
+      border-radius: 0.5rem;
+    }
+
+    &:last-child {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+
+@include media(992px) {
+  .article {
+    padding: 4rem 5%;
+
+    .article_img {
+      // width: 45%;
+      // min-height: 300px;
+      // max-width: 580px;
+      height: 30vh;
+    }
+  }
+}
+
+
+@include media(992px) {
+  .article {
+    .article_img {
+      height: 35vh;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+// @import './assets/scss/config';
+// @import './assets/scss/variable';
+// @import './assets/scss/mixins';
+@import './assets/scss/main.scss';
+
+// body {
+//   max-width: 100%;
+//   height: 100%;
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+//   color: $text-color;
+//   font-family: $xs-family;
+//   font-size: 14px;
+//   font-weight: 300;
+//   line-height: 1.625em;
+//   position: relative;
+//   overflow-x: hidden;
+//   // background-color: $background;
+// }
+
+
+// #root {
+//   width: 100%;
+//   height: 100vh;
+// }
+
+
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// .flex-between {
+//   justify-content: space-between;
+// }
+
+
+
+.flex-unit {
+  flex: 1;
+}

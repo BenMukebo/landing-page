@@ -1,0 +1,258 @@
+@import '../../assets/scss/variable';
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/config';
+
+
+.testimonials_section {
+  width: 100%;
+  background-color: $header-color;
+
+    
+  .testimonials_wrapper {
+    padding: 0 1rem;
+  }
+}
+
+.testimonials_header {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  @include d-flex(center, normal);
+  flex-direction: column;
+  row-gap: 1rem;
+
+  .testimonials_sub_title {
+    text-align: center; 
+    color: $secondary-color;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+  }
+
+  .testimonials_title {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center; 
+    color: $primary-color;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+
+    &::after{
+      content: '';
+      display: block;
+      width: 100px;
+      height: 2px;
+      background-color: $secondary-color;
+      margin: 1rem auto 0;
+    }
+  }
+}
+
+.testimonials_wrappers {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.testimony {
+  background-color: $darkbleu-bgcolor;
+  width: 100%;
+  max-width: 600px;
+  @include d-flex(flex-start, center);
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 2rem 2rem 5rem;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 1rem;
+  position: relative;
+
+  .testimony_text {
+
+    svg {
+      color: $secondary-color;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p.text {
+      font-size: 1rem;
+      line-height: 1.625rem;
+      font-weight: 400;
+      color: $text-color;
+    }
+  }
+}
+
+.testimony_author {
+  text-align: center;
+  margin: 0 auto;
+  transform: translateY(-3rem);
+
+  .author_img {
+    width: 25vw;
+    max-width: 80px;
+    height: auto;
+    margin: 0 auto 1rem;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+    color: $text-color;
+  }
+}
+
+.blog_wrapper {
+  width: 100%;
+  min-height: 150px;
+  padding: 2rem 0 4rem;
+  @include d-flex(center, center);
+  background-color: $secondary-color;
+  flex-wrap: wrap;
+  text-align: center;
+
+  .blog_text {
+    width: 100%;
+    min-width: 200px;
+    padding: 1rem;
+    // font-size: 1.2rem;
+
+    & > div {
+      margin: 0 auto;
+    }
+  
+    h2 {
+      font-size: 1.3rem;
+      line-height: 1.3rem;
+      font-weight: 700;
+      color: $header-color;
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 2rem;
+      font-weight: 400;
+      color: $text-color;
+    }
+  }
+
+  .blog_btn {
+    width: 100%;
+    padding: 1rem;
+  
+    button {
+      padding: 1rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      background-color: $darkbleu-bgcolor;
+      border-radius: 0.5rem;
+      text-align: center;
+      margin: 0 auto;
+      white-space: nowrap;
+      transition: $sm-transition;
+
+      a {
+        color: $header-color;
+      }
+
+      &:hover {
+        background-color: $header-color;
+
+        a {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+@include media(480px) {
+  .testimony {
+    // row-gap: 1rem;
+    padding: 3rem 3rem 6rem;
+  
+    .testimony_text {
+  
+      svg {
+        // font-size: 2rem;
+      }
+  
+      p.text {
+        // font-size: 1.2rem;
+        // line-height: 2rem;
+      }
+    }
+  }
+  
+  .testimony_author {
+    transform: translateY(-5rem);
+  
+    .author_img {
+      // width: 25vw;
+      max-width: 100px;
+      margin: 0 auto 1rem;
+    }
+  
+    p {
+      // font-size: 1.2rem;
+      // line-height: 2rem;
+    }
+  }
+
+  .blog_wrapper {
+    // width: 100%;
+    // min-height: 150px;
+    // padding: 2rem 0 4rem;
+    // @include d-flex(center, center);
+    // background-color: $secondary-color;
+    // flex-wrap: wrap;
+    // text-align: center;
+  
+    .blog_text {
+      width: 70%;
+      min-width: 480px;
+    }
+
+    .blog_btn {
+      width: 30%;
+    }
+  }
+}
+
+@include media(768px) {
+  .testimonials_wrappers {
+    padding: 2rem 0 3rem;
+  }
+  
+  .testimony {
+    max-width: 700px;
+  
+    .testimony_text {
+  
+      svg {
+        font-size: 2.2rem;
+      }
+  
+    }
+  }
+  
+  .testimony_author {
+    transform: translateY(-4rem);
+  
+    .author_img {
+      max-width: 100px;
+      margin: 0 auto 1rem;
+    }
+  
+  }
+}
+

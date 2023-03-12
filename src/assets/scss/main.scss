@@ -1,0 +1,17 @@
+// @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap%27);
+@import './typography';
+@import './variable';
+@import './mixins';
+@import './config';
+
+
+.ql-toolbar {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  width: 100%;
+  // SHOULD BE STICKY WHEN SCROLLING
+  // position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+}

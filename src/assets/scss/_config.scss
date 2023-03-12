@@ -1,0 +1,72 @@
+@import './variable';
+@import './mixins';
+
+%active-menu {
+  color: $secondary-color;
+}
+
+%active-page {
+  background-color: $secondary-color;
+}
+
+%btn-clicked {
+  color: $header-color;
+  transition: sm-transition;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $header-color;
+  }
+}
+
+%btn-hovered {
+ color: $header-color;
+ background-color: $secondary-color;
+
+  &:hover {
+    color: $secondary-color;
+    background: $header-color;
+  }
+}
+
+
+
+// %h2-properties {
+//   font-size: 18px;
+//   letter-spacing: 0.06em;
+//   line-height: 28px;
+//   text-transform: uppercase;
+
+//   &::after {
+//     content: " ";
+//     display: block;
+//     width: 40%;
+//     margin: 5px 0 20px;
+//     border-top: 2px solid var(--primary);
+//   }
+// }
+
+
+// @include media(480px) {
+//   ::-webkit-scrollbar {
+//     width: 5px;
+//   }
+// }
+
+// @media screen and (min-width: 480px) {
+//   %h2-properties {
+//     font-size: 22px;
+//   }
+// }
+
+// @media screen and (min-width: 768px) {
+//   %h2-properties {
+//     font-size: 24px;
+//   }
+// }
+
+// @media screen and (min-width: 922px) {
+//   %h2-properties {
+//     font-size: 26px;
+//   }
+// }

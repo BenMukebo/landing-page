@@ -1,0 +1,134 @@
+@import './variable';
+@import './mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  // font-size: 62.5%;
+  // font-size: 64.5%; // 10px
+    font-size: 12px; // 10px
+    line-height: 16px;
+}
+
+body {
+  width: 100%;
+  color: $text-color;
+  font-family: $xs-family;
+  font-size: 1.6rem;
+  // line-height: 1.625em;
+  line-height: 1.625rem;
+  behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $text-color;
+  box-shadow: inset 0 0 5px $text-color;
+  border-radius: 100vw;
+  // margin-block: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient($secondary-color, $darkbleu-bgcolor);
+  border-radius: 100vw;
+  height: 40vh; //for vertical scrollbar
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient($darkbleu-bgcolor, $secondary-color, $secondary-color);
+}
+
+@include media(480px) {
+  html {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+@include media(768px) {
+  // html {
+  //   font-size: 16px;
+  //   line-height: 19px;
+  // }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+@include media(992px) {
+  html {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    // background-color: transparent;
+  }
+}
+
+@include media(1200px) {
+  html {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul,
+li {
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+//   -webkit-text-fill-color: $secondary-text-color;
+//   -webkit-box-shadow: 0 0 0px 1000px $black-ground-color inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

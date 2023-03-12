@@ -1,0 +1,25 @@
+@import '../../../assets/scss/variable';
+
+.BaseButton {
+    padding: 1rem 2.5rem !important;
+    text-transform: capitalize !important;
+    font-size: 1.4rem !important;
+    color: $primary-text-color;
+    border-radius: 1rem;
+    font-weight: 600;
+    box-shadow: none;
+    cursor: pointer;
+    background-color: $black-bgcolor;
+    color: $white-color;
+
+    &:hover {
+        box-shadow: none;
+        cursor: pointer;
+    }
+
+    &:disabled{
+        cursor: not-allowed;
+        background-color: lighten($black-bgcolor,20);
+        color: $white-color;
+    }
+}

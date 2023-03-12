@@ -1,0 +1,12 @@
+@mixin media($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }  
+}
+
+@mixin d-flex($justfify, $align) {
+  display: flex;
+  justify-content: $justfify;
+  align-items: $align;
+}
+
