@@ -47,19 +47,19 @@
     flex-direction: column;
 
     p.social_media {
-      @include d-flex(center, center);
+      // @include d-flex(center, center);
       // column-gap: 2px;
+    }
 
-      .follow {
-        margin-right: 10px;
-      }
+    .follow {
+      margin-right: 10px;
     }
   }
 }
 
 @include media(480px) {
   .navbar {
-    height: 60px;
+    // height: 50px;
 
     p {
       font-size: 14px;
@@ -72,6 +72,11 @@
 
     .contact_email_social_left {
       flex-direction: row;
+
+
+      .follow {
+        margin-right: 15px;
+      }
     }
   } 
 }
@@ -95,6 +100,7 @@
 
 @include media(992px) {
   .navbar {
+    padding: 0 3%;
     p {
       font-size: 16px;
 
@@ -110,6 +116,10 @@
 
     .contact_email_social_left {
       column-gap: 40px;
+
+      .follow {
+        margin-right: 20px;
+      }
     }
   }
 }
