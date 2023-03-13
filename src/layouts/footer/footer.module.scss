@@ -11,6 +11,30 @@
   padding: 3rem 1rem 2rem;
 }
 
+.social_media_wrapper  {
+  width: 100%;
+  @include d-flex(center, center);
+  column-gap: 10px;
+  margin-bottom: 2rem;
+
+  a svg {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $header-color;
+    margin-top: 0.275rem;
+    padding: 0.4rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0px 11px 32px -12px $text-color;
+  
+    &:hover {
+      background-color: $secondary-color;
+      color: $header-color;
+    }
+  }
+}
+
+
 .footer_lists {
   width: 100%;
   margin: 0 auto;
@@ -56,21 +80,6 @@
         font-size: 1.3rem;
         color: $header-color;
         margin-right: 0.6rem;
-      }
-
-      .social_media_wrapper a svg {
-        background-color: rgba(255, 255, 255, 0.1);
-        margin-top: 0.275rem;
-        padding: 0.4rem;
-        font-size: 2rem;
-        border-radius: 50%;
-        transition: all 0.3s ease;
-        box-shadow: 0px 11px 32px -12px $text-color;
-
-        &:hover {
-          background-color: $secondary-color;
-          color: $header-color;
-        }
       }
     }
   }
@@ -122,6 +131,17 @@
 }
 
 @include media(480px) {
+
+  .social_media_wrapper  {
+    // column-gap: 15px;
+    margin-bottom: 2rem;
+  
+    a svg {
+      font-size: 2.3rem;
+      padding: 0.4rem;
+    }
+  }
+
   .footer_lists {
     @include d-flex(space-around, flex-start);
     flex-flow: row wrap;
@@ -170,6 +190,15 @@
 }
 
 @include media(992px) {
+    .social_media_wrapper  {
+    column-gap: 20px;
+    margin-bottom: 2.5rem;
+  
+    a svg {
+      font-size: 2.5rem;
+      padding: 0.45rem;
+    }
+  }
   .footer_lists {
     width: 100%;
     flex-flow: row nowrap;
