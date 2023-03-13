@@ -1,40 +1,32 @@
-import { BsArrowRightShort } from "react-icons/bs";
+import { BsPlayFill } from "react-icons/bs";
 import styles from './intro.module.scss';
-// import Fade from "react-reveal/Fade";
-// const Fade = require("react-reveal/Fade");
+import videoBg from '../../assets/videos/video-bg.mp4';
+
+
 
 export const Intro: React.FC<{}> = () => {
   return (
-    <section
-      className={styles.intro_section}
-      id="home"
-      data-aos="zoom-in-left"
-      data-stellar-background-ratio="0.5"
-    >
-      <div className={styles.overlay_bg}>
-        <div className={styles.container} data-aos="fade-up" data-aos-delay="400">
-          {/* <Fade bottom> */}
-            <h1 className={styles.intro_title}>
-              Etês vous passionné de la
-              technologie ?
-            </h1>
-          {/* </Fade> */}
-          {/* <Fade bottom> */}
-            <p className={styles.intro_subtitle}>
-              Si vous avez besoin d'une solution pour votre entreprise ou projet. <br/>
-              Ne cherchez pas plus loin que SATEC - Congo sarl. <br />
-              "La solution c'est nous !"
-              {/* La solution c'est nous! SATEC - Congo sarl. */}
-            </p>
-          {/* </Fade> */}
-          {/* <Fade bottom> */}
-          <a href="#services">
+    <section className={styles.intro_section} id="home">
+      <div className={styles.overlay}></div>
+      <div className={styles.video_bg}>
+        <video src={videoBg} autoPlay loop muted />
+      </div>
+      <div className={styles.intro_wrapper}>
+        <div className={styles.container}>
+          <p className={styles.intro_subtitle}>WELCOME TO</p>
+          <h1 className={styles.intro_title}>CHIMPANZEE TREKKING SAFARIS</h1>
+          <p className={styles.intro_text}>Wilderness takes you on an unrivalled journey through a collection of the world’s most iconic wild destinations.</p>
+          {/* <a href="#services">
             <button className={styles.intro_btn} type="submit" aria-label="services">
               Nos Services
-              {/* <BsArrowRightShort/> */}
             </button>
-            </a>
-          {/* </Fade> */}
+          </a> */}
+          <div className={styles.small_circle}></div>
+          <div className={styles.circle_wrapper}>
+            <div className={styles.line_bar}></div>
+            <div className={styles.circle}> <BsPlayFill /></div>
+            <div className={styles.line_bar}></div>
+          </div>
         </div>
       </div>
     </section>
