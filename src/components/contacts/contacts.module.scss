@@ -3,43 +3,38 @@
 @import '../../assets/scss/config';
 
 .contacts_section {
+  background-image: url('../../assets/images/contacta-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   width: 100%;
-  padding: 1rem 1rem 3rem;
-  min-height: 700px;
-  background-color: $header-color;
-}
-
-.contacts_header {
-  width: 100%;
-  margin: 0 auto;
-  padding: 1rem 0;
-  text-align: center;
-
-  .contacts_title {
-    width: 80%;
-    margin: 1rem auto;
-    text-align: center; 
-    // color: $primary-color;
-    // font-size: 1.8rem;
-    // font-weight: 700;
-       
-  }
+  min-height: 900px;
+  @include d-flex(center, flex-end);
 }
 
 .contacts_wrapper {
+  background-color: rgb(238, 235, 229);
   width: 100%;
   @include d-flex(space-between, center);
   flex-direction: column;
+  padding: 3rem 1rem 4rem;
   gap: 1rem;
 }
 
 article.contact_content {
   width: 100%;
-  // text-align: center; 
+  // text-align: center;
 
-  p {
-    font-size: 1rem;
-    font-weight: 400;
+  .contacts_title {
+    width: 80%;
+    margin: 2rem 0;
+    // color: $header-color;
+  }
+
+  .contacts_text {
+    // font-size: 1rem;
+    @extend %normal-text;
+
     margin: 0.5rem 0 1rem;
   }
 }
@@ -101,8 +96,11 @@ form {
 }
 
 @include media(480px) {
-  .contacts_section {
-    padding: 1rem 5% 3rem;
+  .contacts_wrapper {
+    padding: 3rem 5% 4rem;
+    width: 96%;
+    margin: 0 auto;
+    max-width: 1400px;
   }
 
   .contacts_header {
@@ -113,9 +111,8 @@ form {
   }
 
   article.contact_content {
-    p {
-      font-size: 1.3rem;
-      font-weight: 400;
+    .contacts_text {
+      // font-size: 1.3rem;
       margin: 1rem 0 1.5rem;
     }
   }
@@ -140,8 +137,8 @@ form {
 
 @include media(992px) {
   .contacts_wrapper {
-    width: 100%;
-    padding: 3rem 0;
+    width: 96%;
+    padding: 4rem 5% 5rem;
     @include d-flex(space-between, flex-start);
     flex-direction: row;
     gap: 2rem;
@@ -160,9 +157,9 @@ form {
     width: 40%;
     // padding: 0 1rem;
   
-    p {
-      font-size: 1.5rem;
-      line-height: 2.4rem;
+    .contacts_text {
+      // font-size: 1.5rem;
+      // line-height: 2.4rem;
       font-weight: 400;
       margin: 1rem 0 1.5rem;
     }

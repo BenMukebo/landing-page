@@ -178,19 +178,15 @@
       width: 80px;
       height: 80px;
   
-      // svg {
-      //   font-size: 1.3rem;
-      //   padding: 5px;
-      // }
+      svg {
+        font-size: 1.4rem;
+        padding: 4px;
+      }
     }
 
     .line_bar {
       height: 1px;
     }
-
-    // .intro_subtitle {
-    //   white-space: nowrap;
-    // }
   }
 }
 
@@ -249,10 +245,10 @@
       width: 100px;
       height: 100px;
   
-      // svg {
-      //   font-size: 1.3rem;
-      //   padding: 5px;
-      // }
+      svg {
+        font-size: 1.5rem;
+        padding: 5px;
+      }
     }
   }
 }
@@ -260,7 +256,7 @@
 @include media(1200px) {
   .intro_section {
     .overlay_bg {
-      padding: 0 7%;
+      padding: 0 10%;
     }
     .container {
       // max-width: 1100px;
