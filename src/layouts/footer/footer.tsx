@@ -21,10 +21,36 @@ export const Footer: React.FC = () => {
   return (
     <motion.footer className={styles.footer_section}>
       <motion.div className={styles.footer_one}>
+        <div className={styles.footer_social}>
+          <div className={styles.social_media_wrapper}>
+              <a href="https://www.facebook.com/satecongo?mibextid=LQQJ4d"
+                target="blank" title="facebook">
+                <FaFacebookF />
+              </a>
+              <a href="https://wa.me/+243971838655" title="whatsApp">
+                <FaWhatsapp />
+              </a>
+              <a href="https://instagram.com/sateccongo?igshid=YWJhMjlhZTc=" title="instagram">
+                <TbBrandInstagram />
+              </a>
+              <a href="https://www.facebook.com/pages/category/Business-Service/SATEC-Congo-incubation-113625197074726/" title="facebook">
+                {/* <IconContext.Provider value={{ className: "footer-icon" }}> */}
+                <AiOutlineTwitter />
+                {/* </IconContext.Provider> */}
+              </a>
+            </div>
+        </div>
+
         <motion.ul className={styles.footer_lists}>
           <motion.li className={styles.footer_lists_items}>
-            <h3 className={styles.item_title}>Racourcies</h3>
+            <h3 className={styles.item_title}>Menu & Links</h3>
             <motion.div className={styles.item_content}>
+              <p>
+                <a href="#home">
+                  <MdOutlineSubdirectoryArrowRight/>
+                   Home
+                </a>
+              </p>
               <p>
                 <a href="#about">
                   <MdOutlineSubdirectoryArrowRight/>
@@ -32,35 +58,53 @@ export const Footer: React.FC = () => {
                 </a>
               </p>
               <p>
+                <a href="#home">
+                  <MdOutlineSubdirectoryArrowRight/>
+                  Destinations
+                </a>
+              </p>
+              <p>
                 <a href="#services">
                   <MdOutlineSubdirectoryArrowRight/>
-                   Nos services
+                   Services
                 </a>
               </p>
               <p>
                 <a href="#products">
                   <MdOutlineSubdirectoryArrowRight/>
-                  Nos products
+                  Safari Qoute
                 </a>
               </p>
               <p>
                 <a href="https://www.facebook.com/satecongo?mibextid=LQQJ4d">
                   <MdOutlineSubdirectoryArrowRight/>
-                  Notre blog
+                  Blog
                 </a>
               </p>
             </motion.div>
           </motion.li>
 
+          {/* <motion.li className={styles.footer_lists_items}>
+            <h3 className={styles.item_title}>Destinations</h3>
+            <motion.div className={styles.item_content}>
+              <p>Botswana</p>
+              <p>Namibia</p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <p></p>
+            </motion.div>
+          </motion.li> */}
+
           <motion.li className={styles.footer_lists_items}>
-            <h3 className={styles.item_title}>Aprops de nous</h3>
+            <h3 className={styles.item_title}>Welcome to Kawira</h3>
             <motion.div className={styles.item_content}>
               <p className="">
-                La grandeur et la force d’un homme <br/>
-                réside dans les idées, forces qui orientent <br/>
-                un peuple dans un espace donné. <br/>
-                Convaincus de l’impérieuse et absolue <br/>
-                nécessité de faire de notre ville,
+                We promise exceptional service every step of the <br/>
+                way. From Logistics, 24/7 emergency assistance <br/>
+                and our range of safari choices, we are the one- <br/>
+                stop shop Gorilla Trekking Tours, Hotel and Lodge <br/>
+                accommodations, sightseeing and more.
               </p>
             </motion.div>
           </motion.li>
@@ -68,28 +112,26 @@ export const Footer: React.FC = () => {
           <motion.li className={styles.footer_lists_items}>
             <h3 className={styles.item_title}>Contacts</h3>
             <motion.div className={styles.item_content}>
+              <p>KAWIRA SAFARIS LTD, KAMPALA UGANDA</p>
               <p className={styles.contact}>
                 <BiMap/>
                 {/* <span>Adresse:</span> */}
-                136, Av La Frontiere, Q.Katindo <br/>
-                Ville de Goma / Nord-Kivu 
+                KK 718 ST, Kigali, Rwandao
               </p>
               <p className={styles.contact}>
                 <FiPhoneCall/>
-                {/* <span>Téléphone:</span> */}
-                (+243) 994 764 613 <br/>
-                (+243) 971 838 655
+                {/* <span>Phone :</span> */}
+                (+250) 787 976 905
               </p>
               <p className={styles.contact}>
                 <BiPaperPlane/>
                 {/* <span>Email:</span> */}
-                info@sateccongo.com  <br/>
-                eunoshersheria@gmail.com
+                info@kawirasafaris.net.com
               </p>
             </motion.div>
           </motion.li>
 
-          <motion.li className={styles.footer_lists_items}>
+          {/* <motion.li className={styles.footer_lists_items}>
             <h3>Suivez nous</h3>
             <motion.div className={styles.item_content}>
               <div className={styles.item_content}>
@@ -110,14 +152,12 @@ export const Footer: React.FC = () => {
                     <TbBrandInstagram />
                   </a>
                   <a href="https://www.facebook.com/pages/category/Business-Service/SATEC-Congo-incubation-113625197074726/" title="facebook">
-                    {/* <IconContext.Provider value={{ className: "footer-icon" }}> */}
                     <AiOutlineTwitter />
-                    {/* </IconContext.Provider> */}
                   </a>
                 </div>
               </div>
             </motion.div>
-          </motion.li>
+          </motion.li> */}
         </motion.ul>
       </motion.div>
 
