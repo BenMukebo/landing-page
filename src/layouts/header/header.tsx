@@ -5,7 +5,7 @@ import { IconContext } from "react-icons";
 import { FiMenu } from "react-icons/fi";
 import { CgClose } from 'react-icons/cg';
 import { FaAngleDoubleRight } from 'react-icons/fa';
-import logo from "../../assets/images/logo-removebg.png";
+import logo from "../../assets/images/logo.png";
 // import styles from './header.module.scss';
 import './header.scss';
 
@@ -19,23 +19,23 @@ type Props = {
 export const Header: React.FC<Props> = ({ children }) => {
   const MenuLinks: MenuItem[] = [
     {
-      name: 'A propos',
-      linkTo: 'about'
+      name: 'Home',
+      linkTo: 'home'
     },
     {
-      name: 'Services',
+      name: 'Gorilla Safaris',
       linkTo: 'services'
     },
     {
-      name: 'Nos Produits',
+      name: 'Tailormade Safari',
       linkTo: 'products'
     },
     {
-      name: 'Notre Equipe',
+      name: 'Destinations',
       linkTo: 'team'
     },
     {
-      name: 'Contacts',
+      name: 'Blogs',
       linkTo: 'contacts'
     }
   ]
