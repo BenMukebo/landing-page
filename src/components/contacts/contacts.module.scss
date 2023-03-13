@@ -19,18 +19,10 @@
     width: 80%;
     margin: 1rem auto;
     text-align: center; 
-    color: $primary-color;
-    font-size: 1.8rem;
-    font-weight: 700;
-
-    // &::after{
-    //   content: '';
-    //   display: block;
-    //   width: 100px;
-    //   height: 2px;
-    //   background-color: $secondary-color;
-    //   margin: 1rem auto 0;
-    // }        
+    // color: $primary-color;
+    // font-size: 1.8rem;
+    // font-weight: 700;
+       
   }
 }
 
@@ -115,9 +107,9 @@ form {
 
   .contacts_header {
   
-    .contacts_title {
-      font-size: 2rem;
-    }
+    // .contacts_title {
+    //   font-size: 2rem;
+    // }
   }
 
   article.contact_content {
@@ -159,7 +151,7 @@ form {
   
     .contacts_title {
       // margin: 1rem auto;
-      font-size: 2.5rem;
+      // font-size: 2.5rem;
       // padding-bottom: 1rem;        
     }
   }

@@ -1,6 +1,7 @@
 @import '../../assets/scss/variable';
 @import '../../assets/scss/mixins';
 @import '../../assets/scss/config';
+@import '../../assets/scss/typography';
 
 .intro_section {
   width: 100%;
@@ -44,8 +45,6 @@
     width: 90%;
     margin: 0 auto;
     height: 100%;
-    
-
     @include d-flex(center, center);
     flex-direction: column;
     text-align: center;
@@ -64,23 +63,14 @@
   }
 
   .intro_subtitle {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: .4em;
-    font-weight: 500;
+    @extend %subtitle;
     margin-bottom: 2rem;
-    color: $text-color;
-    font-family: Atyp Display Medium,ui-sans-serif,system-ui,-apple-system;
   }
 
   .intro_text {
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: .025em;
     font-weight: 300;
+    @extend %normal-text;
     margin-bottom: 2rem;
-    color: $text-color;
-    font-family: Atyp Display Light,ui-sans-serif,system-ui,-apple-system;
   }
 
   .intro_btn {
@@ -161,15 +151,6 @@
       line-height: 48px;
     }
   
-    .intro_subtitle {
-      font-size: 16px;
-      line-height: 22px;
-    }
-
-    .intro_text {
-      font-size: 16px;
-      line-height: 26px;
-    }
   
     .intro_btn {
       @include d-flex(center, center);
@@ -239,16 +220,8 @@
     }
   
     .intro_subtitle {
-      font-size: 18px;
-      line-height: 30px;
       margin-bottom: 1rem;
-      font-weight: 400;
       margin-bottom: 2.2rem;
-    }
-
-    .intro_text {
-      font-size: 16px;
-      line-height: 26px;
     }
 
     .intro_btn {
