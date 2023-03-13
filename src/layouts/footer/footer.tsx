@@ -19,8 +19,8 @@ import styles from './footer.module.scss';
 
 export const Footer: React.FC = () => {
   return (
-    <motion.footer className={styles.footer_section}>
-      <motion.div className={styles.footer_one}>
+    <footer className={styles.footer_section}>
+      <div className={styles.footer_one}>
         <div className={styles.footer_social}>
           <div className={styles.social_media_wrapper}>
               <a href="https://www.facebook.com/satecongo?mibextid=LQQJ4d"
@@ -41,8 +41,8 @@ export const Footer: React.FC = () => {
             </div>
         </div>
 
-        <motion.ul className={styles.footer_lists}>
-          <motion.li className={styles.footer_lists_items}>
+        <ul className={styles.footer_lists}>
+          <li className={styles.footer_lists_items}>
             <h3 className={styles.item_title}>Menu & Links</h3>
             <motion.div className={styles.item_content}>
               <p>
@@ -82,9 +82,9 @@ export const Footer: React.FC = () => {
                 </a>
               </p>
             </motion.div>
-          </motion.li>
+          </li>
 
-          {/* <motion.li className={styles.footer_lists_items}>
+          {/* <li className={styles.footer_lists_items}>
             <h3 className={styles.item_title}>Destinations</h3>
             <motion.div className={styles.item_content}>
               <p>Botswana</p>
@@ -94,9 +94,9 @@ export const Footer: React.FC = () => {
               <p></p>
               <p></p>
             </motion.div>
-          </motion.li> */}
+          </li> */}
 
-          <motion.li className={styles.footer_lists_items}>
+          <li className={styles.footer_lists_items}>
             <h3 className={styles.item_title}>Welcome to Kawira</h3>
             <motion.div className={styles.item_content}>
               <p className="">
@@ -107,9 +107,9 @@ export const Footer: React.FC = () => {
                 accommodations, sightseeing and more.
               </p>
             </motion.div>
-          </motion.li>
+          </li>
 
-          <motion.li className={styles.footer_lists_items}>
+          <li className={styles.footer_lists_items}>
             <h3 className={styles.item_title}>Contacts</h3>
             <motion.div className={styles.item_content}>
               <p>KAWIRA SAFARIS LTD, KAMPALA UGANDA</p>
@@ -129,9 +129,9 @@ export const Footer: React.FC = () => {
                 info@kawirasafaris.net.com
               </p>
             </motion.div>
-          </motion.li>
+          </li>
 
-          {/* <motion.li className={styles.footer_lists_items}>
+          {/* <li className={styles.footer_lists_items}>
             <h3>Suivez nous</h3>
             <motion.div className={styles.item_content}>
               <div className={styles.item_content}>
@@ -157,21 +157,13 @@ export const Footer: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-          </motion.li> */}
-        </motion.ul>
-      </motion.div>
+          </li> */}
+        </ul>
+      </div>
 
-      <motion.div className={styles.footer_copy_right}>
-        <motion.p>
-          Copyright &copy; 2020 All rights reserved | {''}
-          <span>Made with <FaHeart /> by 
-            <a href="https://www.fidbagraphics.com" title="fidbagraphics" target="blank">
-              {''} Fidba Graphics
-            </a>
-          </span>
-        </motion.p>
-      </motion.div>
-    </motion.footer>
+      <div className={styles.footer_copy_right}>
+      </div>
+    </footer>
   );
 };
 
