@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { MenuItem } from '../../modal/index';
 import { IconContext } from "react-icons";
@@ -7,6 +8,7 @@ import { CgClose } from 'react-icons/cg';
 import { FaAngleDoubleRight } from 'react-icons/fa';
 import logo from "../../assets/images/logo.png";
 // import styles from './header.module.scss';
+
 import './header.scss';
 
 type Props = {
@@ -20,23 +22,23 @@ export const Header: React.FC<Props> = ({ children }) => {
   const MenuLinks: MenuItem[] = [
     {
       name: 'Home',
-      linkTo: 'home'
+      linkTo: './'
     },
     {
       name: 'Gorilla Safaris',
-      linkTo: 'services'
+      linkTo: './gorilla'
     },
     {
       name: 'Tailormade Safari',
-      linkTo: 'products'
+      linkTo: './products'
     },
     {
       name: 'Destinations',
-      linkTo: 'team'
+      linkTo: './team'
     },
     {
       name: 'Blogs',
-      linkTo: 'contacts'
+      linkTo: './contacts'
     }
   ]
 
@@ -69,6 +71,8 @@ const preventScrolling = () => {
      }
   };
   window.addEventListener('scroll', changeNavbarColor);
+  // const navigate = useNavigate();
+
 
   return (
     <header className="header_container">
@@ -77,9 +81,9 @@ const preventScrolling = () => {
       </>
       <motion.div className={`header-scrolled  ${(colorChange || burgerClicked) && 'colorChange'} d-flex flex-center`}>
         <motion.div className="logo">
-          <a href="#home">
+          <NavLink to="./">
             <img src={logo} alt="logo" />
-          </a>
+          </NavLink>
         </motion.div>
 
         <motion.nav className="navbar d-flex flex-center">
@@ -102,10 +106,10 @@ const preventScrolling = () => {
           {/* <ul className={`nav_menu ${showNavBar} d-flex flex-column`}> */}
             {MenuLinks.map((menu: MenuItem) => (
               <motion.li key={menu.name} className="menu_item">
-                <a href={`#${menu.linkTo}`} onClick={handleBurgerClick}>
+                <NavLink to={menu.linkTo} onClick={handleBurgerClick}>
                     {menu.name}
                     <span><FaAngleDoubleRight /></span>
-                </a>
+                </NavLink>
               </motion.li>
             ))}
           </motion.ul>
