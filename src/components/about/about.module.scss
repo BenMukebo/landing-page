@@ -13,7 +13,7 @@
   padding: 2rem 1rem;
 }
   
-.article_subtitle {
+.article_sub_title {
   @extend %subtitle;
 }
 
@@ -25,7 +25,8 @@
   margin: 2rem 0;
   
   .article_content {
-    width: 100%;  
+    width: 100%;
+
     .article_title {
       color: $header-color;
       padding-bottom: 1rem;

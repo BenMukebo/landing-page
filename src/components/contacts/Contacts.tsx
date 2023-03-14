@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion"
-// const Fade = require("react-reveal/Fade");
 
 import styles from './contacts.module.scss';
 

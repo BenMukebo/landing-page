@@ -1,6 +1,6 @@
 import React from "react";
-import image1 from '../../assets/images/gorilla_trek.png';
-import image2 from '../../assets/images/about_us.png';
+import image1 from '../../assets/images/gorilla_trek.webp';
+import image2 from '../../assets/images/about_us.webp';
 
 
 import styles from './about.module.scss';
@@ -9,7 +9,7 @@ export const About: React.FC<{}> = () => {
   return (
     <section className={styles.about_section} id="about">
       <div className={styles.articles_wrapper}>
-        <p className={styles.article_subtitle}>VAST & UNTOUCHED</p>
+        <h4 className={styles.article_sub_title}>VAST & UNTOUCHED</h4>
         <article className={styles.article}>
           <div className={styles.article_content}>
             <h2 className={styles.article_title}>Explore an untamed Zambia safari</h2>
@@ -32,6 +32,18 @@ export const About: React.FC<{}> = () => {
           </div>
         </article>
       </div>
+      {/* <article className={styles.article}>
+        <div className={styles.article_content}>
+          <h2 className={styles.article_title}>
+             glance</h2>
+          <p className={styles.article_text}>
+            Going off the beaten track comes with questions. When is the best season to view wildlife in Zambia? How cold does it get at night and what languages are spoken? To help you prepare for your journey, we have put together a few keys facts to encourage your adventurous spirit.
+          </p>
+          </div>
+        <div className={styles.article_img}>
+          <img src={image2} alt="about-us" />
+        </div>
+        </article> */}
   </section>
   );
 }

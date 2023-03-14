@@ -3,7 +3,7 @@
 @import '../../assets/scss/config';
 
 .contacts_section {
-  background-image: url('../../assets/images/contacta-bg.png');
+  background-image: url('../../assets/images/contacta-bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -13,7 +13,7 @@
 }
 
 .contacts_wrapper {
-  background-color: rgb(238, 235, 229);
+  background-color: $secondary-backg;
   width: 100%;
   @include d-flex(space-between, center);
   flex-direction: column;
