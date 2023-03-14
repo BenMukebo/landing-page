@@ -1,5 +1,5 @@
 import { Header, Navbar, Main, Footer } from '../../layouts';
-import { Intro, About, Services, Contacts  } from '../../components/index';
+import { Intro, About, Services, Features, Contacts  } from '../../components/index';
 // import styles from './home.module.scss';
 
 export const Home: React.FC<{}> = () => {
@@ -14,6 +14,7 @@ export const Home: React.FC<{}> = () => {
         <Services />
         {/* <Team /> */}
         {/* <Testimonials /> */}
+        <Features />
         <Contacts />
       </Main>
       <Footer />
