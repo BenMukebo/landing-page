@@ -62,7 +62,7 @@
     font-family: Athelas,ui-sans-serif,system-ui,-apple-system;
   }
 
-  .intro_subtitle {
+  .intro_sub_title {
     @extend %subtitle;
     margin-bottom: 2rem;
   }
@@ -201,7 +201,7 @@
       // line-height: 48px;
     }
   
-    .intro_subtitle {
+    .intro_sub_title {
       font-weight: 400;
       margin-bottom: 2rem;
     }
@@ -215,7 +215,7 @@
       line-height: 60px;
     }
   
-    .intro_subtitle {
+    .intro_sub_title {
       margin-bottom: 1rem;
       margin-bottom: 2.2rem;
     }
@@ -268,7 +268,7 @@
       line-height: 80px // 104px;
     }
   
-    .intro_subtitle {
+    .intro_sub_title {
       font-size: 20px;
       line-height: 32px;
       font-weight: 500;

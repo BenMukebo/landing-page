@@ -13,7 +13,7 @@ export const Intro: React.FC<{}> = () => {
       </div>
       <div className={styles.intro_wrapper}>
         <div className={styles.container}>
-          <p className={styles.intro_subtitle}>WELCOME TO</p>
+          <h4 className={styles.intro_sub_title}>WELCOME TO</h4>
           <h1 className={styles.intro_title}>CHIMPANZEE TREKKING SAFARIS</h1>
           <p className={styles.intro_text}>Wilderness takes you on an unrivalled journey through a collection of the world’s most iconic wild destinations.</p>
           {/* <a href="#services">

@@ -9,9 +9,7 @@ import {
   FaHeart,
   // FaMapMarkerAlt
 } from "react-icons/fa";
-import {
-  MdOutlineSubdirectoryArrowRight,
-} from "react-icons/md";
+import { HiArrowSmRight } from "react-icons/hi";
 import { FiPhoneCall } from "react-icons/fi";
 import { BiMap, BiPaperPlane } from 'react-icons/bi';
 
@@ -47,37 +45,37 @@ export const Footer: React.FC = () => {
             <motion.div className={styles.item_content}>
               <p>
                 <a href="#home">
-                  <MdOutlineSubdirectoryArrowRight/>
+                  <HiArrowSmRight/>
                    Home
                 </a>
               </p>
               <p>
                 <a href="#about">
-                  <MdOutlineSubdirectoryArrowRight/>
+                  <HiArrowSmRight/>
                   Apropos de nous
                 </a>
               </p>
               <p>
                 <a href="#home">
-                  <MdOutlineSubdirectoryArrowRight/>
+                  <HiArrowSmRight/>
                   Destinations
                 </a>
               </p>
               <p>
                 <a href="#services">
-                  <MdOutlineSubdirectoryArrowRight/>
+                  <HiArrowSmRight/>
                    Services
                 </a>
               </p>
               <p>
                 <a href="#products">
-                  <MdOutlineSubdirectoryArrowRight/>
+                  <HiArrowSmRight/>
                   Safari Qoute
                 </a>
               </p>
               <p>
                 <a href="https://www.facebook.com/satecongo?mibextid=LQQJ4d">
-                  <MdOutlineSubdirectoryArrowRight/>
+                  <HiArrowSmRight/>
                   Blog
                 </a>
               </p>
