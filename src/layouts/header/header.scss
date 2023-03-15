@@ -27,7 +27,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border-bottom: 1px solid #39353e;
+    // border-bottom: 1px solid #39353e;
+    border-top: 1px solid #77777747;
   }
 
   &.colorChange {
@@ -158,7 +159,7 @@
   .header-scrolled {
     padding: 0 3%;
     // top: 50px;
-    height: 90px;
+    height: 100px;
     @include d-flex(space-around, center);
 
     .hamburger-lines {
