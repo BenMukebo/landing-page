@@ -1,4 +1,5 @@
 import React from "react";
+import logo from '../../assets/images/logo.png';
 import { motion } from "framer-motion"
 
 import { AiOutlineTwitter } from 'react-icons/ai';
@@ -160,8 +161,15 @@ export const Footer: React.FC = () => {
       </div>
 
       <div className={styles.footer_copy_right}>
+        <div className={styles.logo}>
+          <img src={logo} alt="logo" />
+        </div>
+        <div className={styles.text}>
+          <p>Disclaimer</p>
+          <p>Privacy Policy</p>
+        </div>
+        <p className={styles.copyright}>copyright @2022 Kawira. All rights reserved</p>
       </div>
     </footer>
   );
 };
-

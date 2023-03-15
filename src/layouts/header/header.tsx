@@ -6,7 +6,7 @@ import { IconContext } from "react-icons";
 import { FiMenu } from "react-icons/fi";
 import { CgClose } from 'react-icons/cg';
 import { FaAngleDoubleRight } from 'react-icons/fa';
-import logo from "../../assets/images/logo.png";
+import logo from '../../assets/images/logo.png';
 // import styles from './header.module.scss';
 
 import './header.scss';
@@ -16,7 +16,6 @@ type Props = {
   isVisible: boolean;
   other?: any;
 };
-
 
 export const Header: React.FC<Props> = ({ children }) => {
   const MenuLinks: MenuItem[] = [
