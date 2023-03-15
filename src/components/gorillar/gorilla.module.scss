@@ -1,0 +1,162 @@
+@import '../../assets/scss/variable';
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/config';
+@import '../../assets/scss/typography';
+
+
+.about_section {
+  width: 100%;
+  background-color: $darkbleu-bgcolor;
+}
+
+.articles_wrapper {
+  padding: 2rem 1rem;
+}
+  
+.article_sub_title {
+  @extend %sub-title ;
+}
+
+.line_brake{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  h1{
+    color: white;
+    padding: 2rem 0;
+    border-right: 2px solid white;
+    border-radius: 20rem;
+  }
+}
+
+.article {
+  width: 100%;
+  @include d-flex(flex-start, normal);
+  flex-direction: column;
+  row-gap: 2rem;
+  margin: 2rem 0;
+  
+  .article_content {
+    width: 100%;
+
+    .article_title {
+      color: $header-color;
+      padding-bottom: 1rem;
+    }
+
+    & > * {
+      max-width: 540px;
+    }
+
+    .article_text {
+      @extend %normal-text;
+    }
+  }
+
+  .article_img {
+    width: 100%;
+    min-height: 200px;
+    height: 25vh;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+@include media(480px) {
+  .articles_wrapper {
+    padding: 3rem 5%;
+  }
+  .article {
+    .article_img {
+      margin: 0 auto;
+      max-width: 640px;
+      min-height: 300px;
+      height: 45vh;
+    }
+
+    .article_content {
+      width: 100%;
+      padding: 2rem 0;
+    
+      // .article_title {
+      //   font-size: 2.3rem;
+      //   line-height: 3.5rem;
+      // }
+
+      // .article_text {
+      //   font-size: 14px;
+      //   line-height: 1.6rem;
+      // }
+    }
+  }
+}
+
+@include media(768px) {
+  .article {
+
+    // .article_content {
+    //   width: 45%;
+    //   max-width: 580px;
+  
+    //   .article_title {
+    //     margin: 0 0 0.2rem;
+
+    //     &::after{
+    //       content: '';
+    //       display: block;
+    //       margin: 0.5rem 0 0;
+    //     }
+    //   }
+    // }
+
+
+  }
+}
+
+
+@include media(992px) {
+  .articles_wrapper {
+    padding: 4rem 5%;
+  }
+
+  .article {
+    @include d-flex(space-around, center);
+    flex-direction: row;
+    margin: 5rem 0;
+
+    .article_content {
+      width: 45%;
+      padding: 2rem 0;
+
+      & > * {
+        max-width: 540px;
+      }
+    }
+
+    &:last-child {
+      flex-direction: row-reverse;
+    }
+
+    .article_img {
+      max-width: 640px;
+      width: 45%;
+      height: 55vh;
+      border-radius: 0.3rem;
+    }
+
+  }
+}
+
+
+@include media(1200px) {
+  .articles_wrapper {
+    padding: 4rem 10%;
+  }
+}
