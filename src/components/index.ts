@@ -1,6 +1,7 @@
 export * from './intro/Intro';
 export * from './intro2/Intro2';
 export * from './about/About';
+export * from './experience/Experience';
 export * from './gorillar/Gorillar';
 export * from './services/Services';
 export * from './team/Team';
