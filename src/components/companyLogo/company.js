@@ -6,8 +6,7 @@ import "swiper/css/zoom";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Zoom, Navigation, Pagination } from "swiper";
-
+import { Zoom, Navigation, Pagination,  Autoplay } from "swiper";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -16,7 +15,6 @@ import Log2 from '../../assets/images/logo2.webp';
 import Log3 from '../../assets/images/logo3.webp';
 import Log4 from '../../assets/images/logo4.webp';
 
-// import '../homepage.scss';
 import './company.scss';
 
 export const Company = () => {
@@ -34,18 +32,25 @@ export const Company = () => {
         the partner up with there clients,  the partner up with there clients
       </p>
         <Swiper
-        style={{
-          "--swiper-navigation-color": "#ccc",
-          "--swiper-pagination-color": "#ccc",
-        }}
-        zoom={true}
-        navigation={true}
+        // style={{
+        //   "--swiper-navigation-color": "#ccc",
+        //   "--swiper-pagination-color": "#ccc",
+        // }}
         // slidesPerView={2}
-        spaceBetween={25}
+        // spaceBetween={25}
+        // navigation={true}
+        zoom={true}
         pagination={{
           clickable: true,
         }}
-        modules={[Zoom, Navigation, Pagination]}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: true,
+        }}
+        speed={800}
+        loop
+        className="mySwiper"
+        modules={[Zoom, Navigation, Pagination, Autoplay]}
         className="mySwiper" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"
         breakpoints={{
           '@0.00': {
@@ -56,26 +61,15 @@ export const Company = () => {
             slidesPerView: 1,
             // spaceBetween: 20,
           },
-          640: {
+          540: {
             slidesPerView: 2,
             // spaceBetween: 20,
           },
           786: {
-            slidesPerView: 2,
-            // spaceBetween: 30,
-          },
-          992: {
-            slidesPerView: 3,
-            // spaceBetween: 20,
-          },
-          1024: {
             slidesPerView: 3,
             // spaceBetween: 30,
           },
           1200: {
-            slidesPerView: 4,
-          },
-          1400: {
             slidesPerView: 4,
           },
         }}
@@ -100,7 +94,7 @@ export const Company = () => {
             <img src={Log4} alt="logo_4" loading="lazy" />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div className="swiper-zoom-container">
             <img src={Log1} alt="logo_1" loading="lazy" />
           </div>
@@ -110,9 +104,18 @@ export const Company = () => {
             <img src={Log2} alt="logo_1" loading="lazy" />
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div className="logo_img swiper-zoom-container">
+            <img src={Log3} alt="logo_3" loading="lazy" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="logo_img swiper-zoom-container">
+            <img src={Log4} alt="logo_4" loading="lazy" />
+          </div>
+        </SwiperSlide> */}
       </Swiper>
     </div>
   );
 };
 
-// export default Company;
