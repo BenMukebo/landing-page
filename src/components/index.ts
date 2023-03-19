@@ -6,4 +6,5 @@ export * from './gorillar/Gorillar';
 export * from './services/Services';
 export * from './team/Team';
 export * from './features/Features';
+export * from './companyLogo/company'
 export * from './contacts/Contacts';
