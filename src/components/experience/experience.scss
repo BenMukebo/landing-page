@@ -6,15 +6,20 @@
 .experience_section {
 	width: 100%;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
   background-color: $black-backg;
 }
 
 .heading-details{
-	margin: 2rem 0;
+	margin: 2rem 10%;
   padding: 3rem 0rem;
 	width: 100%;
   display: grid;
-  grid-template-columns: 50% 50%;
+  align-items: flex-end;
+  grid-template-columns: 49% 2% 49%;
 
 	.experience_sub_title {
 		@extend %sub-title ;
@@ -35,6 +40,13 @@
 		letter-spacing: 0.7px;
 
 	}
+
+  .holzpntal{
+    border-right: .5px solid rgba(147, 147, 147, 0.492);
+    padding: 0;
+
+    height: 50%;
+  }
 
 	.right{
 		display: flex;
@@ -73,6 +85,7 @@
     margin: 0;
     padding: 3rem 0;
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 1rem;
     width: 100%;
@@ -83,7 +96,8 @@
 .card-holder{
   display: flex;
   justify-content: center;
-  width: 38rem;
+  align-items: center;
+  // width: 38rem;
 }
 
 .card-content{
@@ -232,11 +246,12 @@
         display: grid;
         grid-template-columns: 100%;
     }
-    .card-holder{
-        width: 18rem;
-    }
+    // .card-holder{
+    //     width: 28rem;
+    // }
     .card-content{
         flex-wrap: wrap;
+        background-color: transparent;
     }
     .car-image-holder{
         position: relative;
