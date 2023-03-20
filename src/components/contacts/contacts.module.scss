@@ -78,21 +78,41 @@ form {
     transition: 0.5s;
     transform: translateX(5px);
   }
-  
+
   .btn_div button {
-    height: 48px;
-    width: 159px;
-    font-size: 17px;
-    line-height: 24px;
-    font-weight: 500;
-    border-radius: 4px;
-    color: $secondary-color;
-    border: 1px solid $secondary-color;
-    @extend %btn-clicked;
-    letter-spacing: 0.03em;
-    padding: 12px;
-    margin-bottom: 10px;
+    @include d-flex(flex-start, center);
+    margin-top: 0.5rem;
+    padding: 1rem 0;
+    
+    svg {
+      @extend %svg-btn;
+    }
+    
+    p {
+      color: $primary-color;
+      font-size: .875rem;
+      font-weight: 500;
+      line-height: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-family: Atyp Display Medium,ui-sans-serif,system-ui,-apple-system;
+    }
   }
+  
+  // .btn_div button {
+  //   height: 48px;
+  //   width: 159px;
+  //   font-size: 17px;
+  //   line-height: 24px;
+  //   font-weight: 500;
+  //   border-radius: 4px;
+  //   color: $secondary-color;
+  //   border: 1px solid $secondary-color;
+  //   @extend %btn-clicked;
+  //   letter-spacing: 0.03em;
+  //   padding: 12px;
+  //   margin-bottom: 10px;
+  // }
 }
 
 @include media(480px) {
@@ -141,7 +161,7 @@ form {
     padding: 4rem 5% 5rem;
     @include d-flex(space-between, flex-start);
     flex-direction: row;
-    gap: 2rem;
+    gap: 5%;
   }
 
   .contacts_header {
