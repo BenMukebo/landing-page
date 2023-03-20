@@ -3,7 +3,6 @@
 @import '../../assets/scss/config';
 @import '../../assets/scss/typography';
 
-
 .about_section {
   width: 100%;
   background-color: $darkbleu-bgcolor;
@@ -68,7 +67,6 @@
   }
 }
 
-
 @include media(480px) {
   .articles_wrapper {
     padding: 3rem 5%;
@@ -115,11 +113,8 @@
     //     }
     //   }
     // }
-
-
   }
 }
-
 
 @include media(992px) {
   .articles_wrapper {
@@ -157,7 +152,6 @@
 
   }
 }
-
 
 @include media(1200px) {
   .articles_wrapper {

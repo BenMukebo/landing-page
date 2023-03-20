@@ -117,6 +117,8 @@
     @include d-flex(space-around, center);
     flex-direction: row;
     margin: 5rem 0;
+    column-gap: 10%;
+
 
     .article_content {
       width: 45%;

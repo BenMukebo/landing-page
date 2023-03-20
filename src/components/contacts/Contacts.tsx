@@ -33,7 +33,7 @@ export const Contacts: React.FC<{}> = () => {
               <input id="email" name="email" placeholder="Email" type="email" required/>
           </div>
           <div className={styles.input_div}>
-            <textarea id="comments" name="comments" placeholder="Comment"
+            <textarea id="comments" name="comments" placeholder="Leave your comment"
             // rows="5"
             ></textarea>
           </div>
