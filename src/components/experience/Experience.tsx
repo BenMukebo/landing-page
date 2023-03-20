@@ -5,25 +5,26 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { HiArrowNarrowRight } from "react-icons/hi";
+import { HiArrowNarrowRight,HiArrowNarrowLeft } from "react-icons/hi";
 import { FiMapPin } from "react-icons/fi";
 
 import image_gallary_1 from '../../assets/images/about_us.webp';
 
 import "./experience.scss";
-// import {EffectCoverflow,Pagination,Navigation} from 'swiper';
+import {EffectCoverflow,Pagination,Navigation} from 'swiper';
 
 export const Experience: React.FC<{}> = () =>{
   return (
     <section  className="experience_section">
       <div className="heading-details">
-        <h4 className="experience_sub_title">OUR EXPERIENCES</h4>
         <div className="left">
+          <h4 className="experience_sub_title">OUR EXPERIENCES</h4>
           <h2 className="experience_title">Experience real, raw nature</h2>
           <p className="experience_text">Travelling is about more than the places you visit and the things you'll see.
               it's about people, culture, wildlife, history, and experiecing something you've never done before. With Wilderness you'll walk, boat, barge, float, fly. drive, ride, trek, track and discover a world of adventures.
           </p>
         </div>
+        <div className="holzpntal"></div>
         <div className="right">
           <div className="domain_more_btn">
             <HiArrowNarrowRight />
@@ -52,6 +53,12 @@ export const Experience: React.FC<{}> = () =>{
                 modifier: 2.5,
             }
           }
+          pagination={{el: '.swiper-pagination',clickable: true}}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          }}
+          modules={[EffectCoverflow,Pagination,Navigation]}
           className="swiper_container"
           >
           <SwiperSlide>
@@ -106,6 +113,14 @@ export const Experience: React.FC<{}> = () =>{
               </div>
             </div>
           </SwiperSlide>
+          {/* <div className="slider-controler">
+            <div className="swiper-button-prev slider-arrow">
+              <HiArrowNarrowLeft />
+            </div>
+            <div className="swiper-button-next slider-arrow">
+              <HiArrowNarrowRight />
+            </div>
+          </div> */}
         </Swiper>
       </div>
     </section>
