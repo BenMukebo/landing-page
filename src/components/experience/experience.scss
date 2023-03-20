@@ -13,13 +13,17 @@
   background-color: $black-backg;
 }
 
+// .heading-details{
+//   display: grid;
+//   grid-template-columns: 100%;
+// }
+
 .heading-details{
 	margin: 2rem 10%;
   padding: 3rem 0rem;
 	width: 100%;
   display: grid;
-  align-items: flex-end;
-  grid-template-columns: 49% 2% 49%;
+  grid-template-columns: 100%;
 
 	.experience_sub_title {
 		@extend %sub-title ;
@@ -102,29 +106,33 @@
 
 .card-content{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
+
 }
 
 .car-image-holder{
     z-index: 1;
+
     position: relative;
-    width: 46rem;
-    height: 28rem;
-    margin-right: -5rem;
-    border-radius: 20rem;
-    overflow: hidden;
+    width: 15rem;
+    height: 15rem;
+      overflow: hidden;
     display: flex;
     justify-content: center;
+    margin-bottom: -7rem;
+    margin-left: -5rem;
+    border-radius: 20rem;
     background-color: rgb(18, 17, 28);
 
 	img {
-		width: 26rem;
-		height: 26rem;
 		margin-top: .9rem;
 		margin-left: .3rem;
 		object-fit: cover;
-		border-radius: 20rem;
+		border-radius: 40rem;
+
+    width: 12rem;
+    height: 12rem;
 	}
 }
 
@@ -132,11 +140,12 @@
     // position: relative;
     /* z-index: -2; */
     background-color: rgb(18, 52, 56);
-    padding: 2rem 10rem;
-    min-height: 28rem;
 		@include d-flex(flex-start, normal);
 		flex-direction: column;
 		gap: 1rem;
+
+    min-height: 35rem;
+    padding: 0 1.5rem 2rem;
 		
 		// & > * {
 		// 	background-color: rgb(97, 73, 73);
@@ -145,6 +154,7 @@
 
 .card-header {
 		color: $header-color;
+    margin-top: 10rem;
 		// font-size: 1.7rem;
 		// font-weight: 400;
 }
@@ -241,37 +251,36 @@
 	}
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (min-width: 800px){
     .heading-details{
         display: grid;
-        grid-template-columns: 100%;
+        align-items: flex-end;
+        grid-template-columns: 49% 2% 49%;
     }
     // .card-holder{
     //     width: 28rem;
     // }
     .card-content{
-        flex-wrap: wrap;
-        background-color: transparent;
+        flex-wrap: nowrap;
     }
     .car-image-holder{
-        position: relative;
-        width: 14rem;
-        height: 14rem;
-        margin-bottom: -7rem;
-        margin-left: -5rem;
-        border-radius: 20rem;
-        background-color: rgb(18, 17, 28);
+      position: relative;
+      width: 46rem;
+      height: 28rem;
+      margin-right: -5rem;
+      border-radius: 20rem;
+      background-color: rgb(18, 17, 28);
     }
     .car-image-holder img{
-        width: 12rem;
-        height: 12rem;
+      width: 26rem;
+      height: 26rem;
     }
     .card-header{
-        margin-top: 10rem;
+        margin-top: 0rem;
     }
     .card-details-holder {
-      min-height: 35rem;
-      padding: 0 1.5rem 2rem;
+      padding: 2rem 10rem;
+      min-height: 28rem;
     }
     // .card-bottom{
     //     position: absolute;
