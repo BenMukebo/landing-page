@@ -14,6 +14,7 @@ export const Gorillar: React.FC<{}> = () => {
 
   useEffect(()=>{
     AOS.init({duration: 2500});
+    AOS.refresh();
   },[]);
 
   return (

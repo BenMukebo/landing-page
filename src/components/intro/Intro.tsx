@@ -9,7 +9,8 @@ import AOS from 'aos';
 export const Intro: React.FC<{}> = () => {
 
   useEffect(()=>{
-    AOS.init({duration: 2000});
+    AOS.init({duration: 2500});
+    AOS.refresh();
   },[]);
 
   return (
