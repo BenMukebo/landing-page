@@ -1,0 +1,269 @@
+@import '../../assets/scss/variable';
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/config';
+@import '../../assets/scss/typography';
+
+.experience_section {
+	width: 100%;
+  padding: 1rem;
+  background-color: $black-backg;
+}
+
+.heading-details{
+	margin: 2rem 0;
+  padding: 3rem 0rem;
+	width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+	.experience_sub_title {
+		@extend %sub-title ;
+		// margin: 2rem 0;
+		/* line-height: 2rem; */
+	}
+
+  .experience_title {
+    color: $header-color;
+    padding-bottom: 1rem;
+		// margin: 2rem;
+		// ine-height: 3rem;
+  }
+
+	.experience_text {
+		@extend %normal-text;
+		margin: 1rem 0;
+		letter-spacing: 0.7px;
+
+	}
+
+	.right{
+		display: flex;
+		align-items: flex-end;
+		// padding-left: 2rem;
+	}
+
+	.domain_more_btn {
+    @include d-flex(flex-start, center);
+    margin-top: 2.5rem;
+    padding: 1rem;
+    
+    svg {
+			@extend %svg-btn;
+    }
+
+		&:hover  svg {
+			fill: $header-color;
+			background-color: $secondary-color;
+		}
+
+    p {
+			padding-top: 0.25rem;
+      color: $header-color;
+      font-size: .875rem;
+      line-height: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-family: Atyp Display Medium,ui-sans-serif,system-ui,-apple-system;
+    }
+  }
+}
+
+
+.card-body {
+    margin: 0;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  
+
+.card-holder{
+  display: flex;
+  justify-content: center;
+  width: 38rem;
+}
+
+.card-content{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.car-image-holder{
+    z-index: 1;
+    position: relative;
+    width: 46rem;
+    height: 28rem;
+    margin-right: -5rem;
+    border-radius: 20rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(18, 17, 28);
+
+	img {
+		width: 26rem;
+		height: 26rem;
+		margin-top: .9rem;
+		margin-left: .3rem;
+		object-fit: cover;
+		border-radius: 20rem;
+	}
+}
+
+.card-details-holder{
+    // position: relative;
+    /* z-index: -2; */
+    background-color: rgb(18, 52, 56);
+    padding: 2rem 10rem;
+    min-height: 28rem;
+		@include d-flex(flex-start, normal);
+		flex-direction: column;
+		gap: 1rem;
+		
+		// & > * {
+		// 	background-color: rgb(97, 73, 73);
+		// }
+}
+
+.card-header {
+		color: $header-color;
+		// font-size: 1.7rem;
+		// font-weight: 400;
+}
+
+.card-paragraph {
+	// paddin-top: 2rem;
+	font-family: sans-serif;
+	font-size: 13px;
+	line-height: 2;
+	color: rgb(210, 210, 210);
+}
+
+.card-link-button{
+	@include d-flex(normal, center);
+    gap: 0.5rem;
+    // padding-top: 2rem;
+
+	svg {
+		@extend %svg-btn;
+	}
+
+	span {
+		color: $header-color;
+		font-size: .9rem;
+		line-height: 1.25rem;
+		text-transform: uppercase;
+		letter-spacing: .3em;
+		font-family: Atyp Display Medium,ui-sans-serif,system-ui,-apple-system;
+	}
+}
+
+.card_location {
+	width: 100%;
+	margin-top: 5rem;
+	// padding-top: 5rem;
+	@include d-flex(normal, center);
+  padding: 1.5rem 0;
+	gap: 0.5rem;
+
+	span {
+		color:  $text-color;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: .1em;
+		letter-spacing: 1.2px;
+		opacity: 0.5;
+		font-family: Atyp Display Light,ui-sans-serif,system-ui,-apple-system;
+	}
+}
+
+// .card-bottom{
+//     position: absolute;
+//     bottom: 3px;
+//     display: flex;
+//     align-items: center;
+//     padding: 1.5rem 0;
+//     background-color: rgb(18, 52, 56);
+
+// 		.icon{
+// 			width: 2rem;
+// 			height: 2rem;
+// 			border-radius: 50px;
+// 			border: 1px solid rgb(231, 115, 26);
+// 		}
+
+// 		span{
+// 			font-size: 16px;
+// 			color:rgb(210, 210, 210);
+// 			letter-spacing: 1px;
+// 			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+// 	}
+// }
+
+
+@include media(480px) {
+	.experience_section {
+    padding: 1rem 5%;
+  }
+	.heading-details{
+	
+		.domain_more_btn {
+			
+			svg {
+				font-size: 42px;
+				padding: 0.4rem;
+			}
+
+			p {
+				font-size: .9rem;
+				// line-height: 1.3rem;
+				letter-spacing: .25em;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px){
+    .heading-details{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .card-holder{
+        width: 18rem;
+    }
+    .card-content{
+        flex-wrap: wrap;
+    }
+    .car-image-holder{
+        position: relative;
+        width: 14rem;
+        height: 14rem;
+        margin-bottom: -7rem;
+        margin-left: -5rem;
+        border-radius: 20rem;
+        background-color: rgb(18, 17, 28);
+    }
+    .car-image-holder img{
+        width: 12rem;
+        height: 12rem;
+    }
+    .card-header{
+        margin-top: 10rem;
+    }
+    .card-details-holder {
+      min-height: 35rem;
+      padding: 0 1.5rem 2rem;
+    }
+    // .card-bottom{
+    //     position: absolute;
+    //     bottom: 0rem;
+    //     display: flex;
+    //     align-items: center;
+    //     padding: 1.5rem 0;
+    //     background-color: rgb(18, 52, 56);
+    // }
+}
