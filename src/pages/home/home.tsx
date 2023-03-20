@@ -11,7 +11,7 @@ export const Home: React.FC<{}> = () => {
         <Experience />
         {/* <Team /> */}
         {/* <Testimonials /> */}
-        <Services />
+        {/* <Services /> */}
         <Features />
         <Company />
         <Contacts />
