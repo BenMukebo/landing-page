@@ -1,5 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion"
+import { HiArrowNarrowRight } from "react-icons/hi";
+// import { motion } from "framer-motion"
 
 import styles from './contacts.module.scss';
 
@@ -21,24 +22,27 @@ export const Contacts: React.FC<{}> = () => {
 
         <form action="https://formspree.io/f/xnqlovnj" method="post" id="form">
           <div className={styles.input_wrapper}>
-              <motion.div className={styles.input_div}>
-                <input id="name" name="name" placeholder="Name" type="text" required />
-              </motion.div>
-              <motion.div className={styles.input_div}>
-                <input id="email" name="email" placeholder="Email" type="email" required/>
-              </motion.div>
-
+              <div className={styles.input_div}>
+                <input id="name" name="first_name" placeholder="First name" type="text" required />
+              </div>
+              <div className={styles.input_div}>
+                <input id="name" name="last_name" placeholder="Last name" type="text" required/>
+              </div>
           </div>
-            <motion.div className={styles.input_div}>
-              <textarea id="comments" name="comments" placeholder="Comment"
-              // rows="5"
-              ></textarea>
-            </motion.div>
-            <motion.div className={styles.btn_div}>
-              <button type="submit" aria-label="keep_in_touch">
-                Submit
-              </button>
-            </motion.div>
+          <div className={styles.input_div}>
+              <input id="email" name="email" placeholder="Email" type="email" required/>
+          </div>
+          <div className={styles.input_div}>
+            <textarea id="comments" name="comments" placeholder="Comment"
+            // rows="5"
+            ></textarea>
+          </div>
+          <div className={styles.btn_div}>
+            <button type="submit" aria-label="keep_in_touch">
+              <HiArrowNarrowRight />
+              <p>SUBMIT</p>          
+            </button>
+          </div>
         </form>
       </div>
     </section>
