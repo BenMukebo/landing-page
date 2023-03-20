@@ -8,10 +8,10 @@ export const Home: React.FC<{}> = () => {
       <Main>
         <Intro />
         <About />
-        <Services />
         <Experience />
         {/* <Team /> */}
         {/* <Testimonials /> */}
+        <Services />
         <Features />
         <Company />
         <Contacts />

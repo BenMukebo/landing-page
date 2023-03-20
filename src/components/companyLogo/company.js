@@ -49,7 +49,6 @@ export const Company = () => {
         }}
         speed={800}
         loop
-        className="mySwiper"
         modules={[Zoom, Navigation, Pagination, Autoplay]}
         className="mySwiper" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"
         breakpoints={{
