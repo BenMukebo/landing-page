@@ -17,15 +17,15 @@
   @extend %sub-title ;
 }
 
-.line_brake{
+.line_brake {
   width: 100%;
   display: flex;
   justify-content: center;
 
-  h1{
-    color: white;
+  h1 {
+    color: $header-color;
     padding: 2rem 0;
-    border-right: 2px solid white;
+    border-right: 2px solid $header-color;
     border-radius: 20rem;
   }
 }
@@ -127,12 +127,14 @@
   }
 
   .article {
-    @include d-flex(space-around, center);
+    @include d-flex(space-between, center);
     flex-direction: row;
     margin: 5rem 0;
-
+    column-gap: 15%;
+    
     .article_content {
-      width: 45%;
+      // background-color: red;
+      width: 40%;
       padding: 2rem 0;
 
       & > * {
@@ -145,9 +147,11 @@
     }
 
     .article_img {
-      max-width: 640px;
-      width: 45%;
-      height: 55vh;
+      // background-color: yellow;
+      text-align: left;
+      max-width: 780px;
+      width: 50%;
+      height: 50vh;
       border-radius: 0.3rem;
     }
 
@@ -157,6 +161,6 @@
 
 @include media(1200px) {
   .articles_wrapper {
-    padding: 4rem 10%;
+    padding: 4rem 7%;
   }
 }
