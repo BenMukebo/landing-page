@@ -117,7 +117,7 @@
     position: relative;
     width: 15rem;
     height: 15rem;
-      overflow: hidden;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     margin-bottom: -7rem;
@@ -251,7 +251,7 @@
 	}
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 1000px){
     .heading-details{
         display: grid;
         align-items: flex-end;
@@ -261,6 +261,7 @@
     //     width: 28rem;
     // }
     .card-content{
+        background-color: transparent;
         flex-wrap: nowrap;
     }
     .car-image-holder{
