@@ -4,12 +4,20 @@
 @import '../../assets/scss/typography';
 
 .campany_main {
+  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 1rem;
 
+  .membership_header {
+    width: 100%;
+    padding: 2rem 1rem;
+    // @include d-flex(center, normal);
+    // flex-direction: column;
+    // row-gap: 1rem;
+  }
+
   .membership_title {
-    color: $header-color;
     padding-bottom: 1rem;
   }
 

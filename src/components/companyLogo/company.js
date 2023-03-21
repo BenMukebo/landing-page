@@ -19,18 +19,21 @@ import './company.scss';
 
 export const Company = () => {
   useEffect(() => {
-    AOS.init();
-    AOS.refresh();
+    AOS.init({duration: 2500});
+    AOS.refresh(500);
   }, []);
 
   return (
     <div className="campany_main my-40 relative" data-aos="fade-up" data-aos-duration="3000">
       <div className="cercle-03" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" />
-      <div className="cercle-04" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" />
-      <h2 className=".membership_title">Membership</h2>
-      <p className="membership_text" data-aos="fade-up" data-aos-duration="3000">
-        the partner up with there clients,  the partner up with there clients
-      </p>
+      {/* <div className="cercle-04" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" /> */}
+      <div className="membership_header">
+        <h2 className="membership_title">Membership</h2>
+        <p className="membership_text" data-aos="fade-up" data-aos-duration="3000">
+          The partner up with there clients,  the partner up with there clients
+        </p>
+      </div>
+
         <Swiper
         // style={{
         //   "--swiper-navigation-color": "#ccc",
@@ -50,7 +53,7 @@ export const Company = () => {
         speed={800}
         loop
         modules={[Zoom, Navigation, Pagination, Autoplay]}
-        className="mySwiper" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"
+        className="mySwiper"  data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"
         breakpoints={{
           '@0.00': {
             slidesPerView: 1,
