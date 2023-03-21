@@ -5,13 +5,16 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { HiArrowNarrowRight,HiArrowNarrowLeft } from "react-icons/hi";
+import {EffectCoverflow, Pagination, Navigation, Autoplay} from 'swiper';
+
+import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
 import { GoQuote } from "react-icons/go";
 
 import image_gallary_1 from '../../assets/images/about_us.webp';
+import image_gallary_2 from '../../assets/images/about_us2.webp';
+
 
 import "./experience.scss";
-import {EffectCoverflow,Pagination,Navigation} from 'swiper';
 
 export const Experience: React.FC<{}> = () =>{
   return (
@@ -43,42 +46,69 @@ export const Experience: React.FC<{}> = () =>{
       </div>
 
       <div className="card-body">
-        {/* <Swiper
-          effect={'coverflow'}
+        <Swiper
+          // effect={'coverflow'}
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          slidesPerView={'auto'}
+          // slidesPerView={'auto'}
+          // navigation={true}
+          spaceBetween={45}
           coverflowEffect={
             {
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2.5,
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 2.5,
             }
           }
-          pagination={{el: '.swiper-pagination',clickable: true}}
+          // pagination={{el: '.swiper-pagination',clickable: true}}
+          pagination={{
+            clickable: true,
+          }}
+          speed={800}
           navigation={{
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
           }}
-          modules={[EffectCoverflow,Pagination,Navigation]}
+          modules={[EffectCoverflow, Navigation, Pagination, Autoplay]}
+          breakpoints={{
+            '@0.00': {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            // 480: {
+            //   slidesPerView: 1,
+            //   // spaceBetween: 20,
+            // },
+            // 640: {
+            //   slidesPerView: 2,
+            //   // spaceBetween: 20,
+            // },
+            786: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            992: {
+              slidesPerView: 1,
+            },
+          }}
           className="swiper_container"
-          > */}
-          {/* <SwiperSlide> */}
+          >
+          <SwiperSlide>
             <div className="card-holder">
               <div className="card-content">
                 <div className="car-image-holder">
-                  <img src={image_gallary_1} alt="flit_1" />
+                  <img src={image_gallary_2} alt="flit_1" />
                 </div>
                 <div className="card-details-holder">
                     <h3 className="card-header">Nature walks</h3>
                     <p className="card-paragraph">
-                    We had an absolutely amazing time on our two-day tour with Kawira! Isaac was a fantastic guide, 
-                    extremely friendly and knowledgeable and lots of good conversation along the way. 
-                    Ian went above and beyond to organize our tour as well as help us organize other parts of our vacation. 
+                    We had an absolutely amazing time on our two-day tour with Kawira! Isaac was a fantastic guide,
+                    extremely friendly and knowledgeable and lots of good conversation along the way.
+                    Ian went above and beyond to organize our tour as well as help us organize other parts of our vacation.
                     Nyungwe Forest is just stunningly beautiful and is a must-visit for a trip to Rwanda.
-                    I can't recommend Kawira enough - great tour and lovely people! 
+                    I can't recommend Kawira enough - great tour and lovely people!
                     </p>
                     {/* <div className="card-link-button">
                       <HiArrowNarrowRight />
@@ -91,9 +121,9 @@ export const Experience: React.FC<{}> = () =>{
                 </div>
               </div>
             </div>
-          {/* </SwiperSlide>
+          </SwiperSlide>
 
-          {/* <SwiperSlide> */}
+          <SwiperSlide>
             <div className="card-holder">
               <div className="card-content">
                 <div className="car-image-holder">
@@ -113,7 +143,56 @@ export const Experience: React.FC<{}> = () =>{
                 </div>
               </div>
             </div>
-          {/* </SwiperSlide>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="card-holder">
+              <div className="card-content">
+                <div className="car-image-holder">
+                  <img src={image_gallary_2} alt="flit_1" />
+                </div>
+                <div className="card-details-holder">
+                    <h3 className="card-header">Nature walks</h3>
+                    <p className="card-paragraph">
+                    We had an absolutely amazing time on our two-day tour with Kawira! Isaac was a fantastic guide,
+                    extremely friendly and knowledgeable and lots of good conversation along the way.
+                    Ian went above and beyond to organize our tour as well as help us organize other parts of our vacation.
+                    Nyungwe Forest is just stunningly beautiful and is a must-visit for a trip to Rwanda.
+                    I can't recommend Kawira enough - great tour and lovely people!
+                    </p>
+                    {/* <div className="card-link-button">
+                      <HiArrowNarrowRight />
+                      <span>Nature Walks</span>
+                    </div> */}
+                    <div className="card_location">
+                      <GoQuote />
+                      <p>Rachel - <span>Trip-advisor </span></p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="card-holder">
+              <div className="card-content">
+                <div className="car-image-holder">
+                  <img src={image_gallary_1} alt="flit_1" />
+                </div>
+                <div className="card-details-holder">
+                    <h3 className="card-header">Nature walks</h3>
+                    <p className="card-paragraph">
+                      I've been on a handful of Safaris in east Africa and my trip with Ian and Kawira was by far the best.
+                      The guides were super accommodating and had great stories to tell.
+                      Couldn't have chosen a better way to see the gorillas in Rwanda and would recommend Ian and his crew to anyone! 
+                    </p>
+                    <div className="card_location">
+                      <GoQuote />
+                      <p>Duncan - <span>Tripadvisor</span></p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
           {/* <div className="slider-controler">
             <div className="swiper-button-prev slider-arrow">
               <HiArrowNarrowLeft />
@@ -122,7 +201,7 @@ export const Experience: React.FC<{}> = () =>{
               <HiArrowNarrowRight />
             </div>
           </div> */}
-        {/* </Swiper> */}
+        </Swiper>
       </div>
     </section>
   )
