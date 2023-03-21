@@ -22,6 +22,7 @@
 .heading-details{
 	width: 100%;
   max-width: calc(1400px);
+  margin: 0 auto;
   
 	// margin: 2rem 0;
   padding: 5rem 1rem;
@@ -226,11 +227,11 @@
 
 
 @include media(992px) {
-      .heading-details{
-        display: grid;
-        align-items: flex-end;
-        grid-template-columns: 49% 2% 49%;
-    }
+  .heading-details{
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: 49% 2% 49%;
+  }
 
   .card-content {
     @include d-flex(flex-end, center);
@@ -255,7 +256,7 @@
     
     @include d-flex(flex-start, normal);
     // padding: 4rem 1.5rem 2rem;
-    padding: 2rem 5% 2rem 12rem;
+    padding: 2rem 10% 2rem 12rem;
 
   }
 
@@ -270,9 +271,30 @@
     // padding: 1rem 5%;
     // max-width: calc(1400px);
   }
+  .card-content {
+    @include d-flex(flex-end, center);
+    flex-direction: row;
+    max-width: 1024px;
+  }
 
+  .car-image-holder {
+    width: 480px;
+    height: 480px;
+    left: -2rem;
+  }
 
   .card-details-holder {
-    min-height: 30rem;
+    max-width: 800px;
+    width: 70%;
+    min-height: 34rem;
+    
+    @include d-flex(flex-start, normal);
+    // padding: 4rem 1.5rem 2rem;
+    
+  }
+  
+  .card-details-holder {
+    padding: 2rem 15% 2rem 12rem;
+    min-height: 29rem;
   }
 }
