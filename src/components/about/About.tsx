@@ -9,7 +9,8 @@ import AOS from 'aos';
 
 export const About: React.FC<{}> = () => {
     useEffect(()=>{
-    AOS.init({duration: 2000});
+      AOS.init({duration: 2500});
+      AOS.refresh();
   },[]);
   return (
     <section className={styles.about_section} id="about">
