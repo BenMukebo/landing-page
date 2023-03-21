@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { HiArrowNarrowRight,HiArrowNarrowLeft } from "react-icons/hi";
-import { FiMapPin } from "react-icons/fi";
+import { GoQuote } from "react-icons/go";
 
 import image_gallary_1 from '../../assets/images/about_us.webp';
 
@@ -18,10 +18,14 @@ export const Experience: React.FC<{}> = () =>{
     <section  className="experience_section">
       <div className="heading-details">
         <div className="left">
-          <h4 className="experience_sub_title">OUR EXPERIENCES</h4>
-          <h2 className="experience_title">Experience real, raw nature</h2>
-          <p className="experience_text">Travelling is about more than the places you visit and the things you'll see.
-              it's about people, culture, wildlife, history, and experiecing something you've never done before. With Wilderness you'll walk, boat, barge, float, fly. drive, ride, trek, track and discover a world of adventures.
+          <h4 className="experience_sub_title">TESTIMONIALS</h4>
+          <h2 className="experience_title">WHAT PEOPLE SAYS ABOUT US</h2>
+          <p className="experience_text">
+            We had an absolutely amazing time on our two-day tour with Kawira! Isaac was a fantastic guide, 
+            extremely friendly and knowledgeable and lots of good conversation along the way. 
+            Ian went above and beyond to organize our tour as well as help us organize other parts of our vacation. 
+            Nyungwe Forest is just stunningly beautiful and is a must-visit for a trip to Rwanda.
+            I can't recommend Kawira enough - great tour and lovely people!
           </p>
         </div>
         <div className="holzpntal"></div>
@@ -39,7 +43,7 @@ export const Experience: React.FC<{}> = () =>{
       </div>
 
       <div className="card-body">
-        <Swiper
+        {/* <Swiper
           effect={'coverflow'}
           grabCursor={true}
           centeredSlides={true}
@@ -60,8 +64,8 @@ export const Experience: React.FC<{}> = () =>{
           }}
           modules={[EffectCoverflow,Pagination,Navigation]}
           className="swiper_container"
-          >
-          <SwiperSlide>
+          > */}
+          {/* <SwiperSlide> */}
             <div className="card-holder">
               <div className="card-content">
                 <div className="car-image-holder">
@@ -70,49 +74,46 @@ export const Experience: React.FC<{}> = () =>{
                 <div className="card-details-holder">
                     <h3 className="card-header">Nature walks</h3>
                     <p className="card-paragraph">
-                      Have your camera ready and lace up your walking shoes - once your feet touch African soil, you’ll understand the magic.
+                    We had an absolutely amazing time on our two-day tour with Kawira! Isaac was a fantastic guide, 
+                    extremely friendly and knowledgeable and lots of good conversation along the way. 
+                    Ian went above and beyond to organize our tour as well as help us organize other parts of our vacation. 
+                    Nyungwe Forest is just stunningly beautiful and is a must-visit for a trip to Rwanda.
+                    I can't recommend Kawira enough - great tour and lovely people! 
                     </p>
                     {/* <div className="card-link-button">
-                        <div className="icon"></div>
-                        <span>Nature Walks</span>
-                    </div> */}
-                    <div className="card-link-button">
                       <HiArrowNarrowRight />
                       <span>Nature Walks</span>
-                    </div>
+                    </div> */}
                     <div className="card_location">
-                      <FiMapPin />
-                      <span>Namibia, Rwanda</span>
+                      <GoQuote />
+                      <p>Rachel - <span>Trip-advisor </span></p>
                     </div>
                 </div>
               </div>
             </div>
-          </SwiperSlide>
+          {/* </SwiperSlide>
 
-          <SwiperSlide>
+          {/* <SwiperSlide> */}
             <div className="card-holder">
               <div className="card-content">
                 <div className="car-image-holder">
-                  <img src={image_gallary_1} alt="flit_2" />
+                  <img src={image_gallary_1} alt="flit_1" />
                 </div>
-
                 <div className="card-details-holder">
-                  <h3 className="card-header">Nature walks</h3>
-                  <p className="card-paragraph">
-                    Have your camera ready and lace up your walking shoes - once your feet touch African soil, you’ll understand the magic.
-                  </p>
-                  <div className="card-link-button">
-                    <HiArrowNarrowRight />
-                    <span>Nature Walks</span>
-                  </div>
-                  <div className="card_location">
-                    <FiMapPin />
-                    <span>Namibia, Rwanda</span>
-                  </div>
+                    <h3 className="card-header">Nature walks</h3>
+                    <p className="card-paragraph">
+                      I've been on a handful of Safaris in east Africa and my trip with Ian and Kawira was by far the best.
+                      The guides were super accommodating and had great stories to tell.
+                      Couldn't have chosen a better way to see the gorillas in Rwanda and would recommend Ian and his crew to anyone! 
+                    </p>
+                    <div className="card_location">
+                      <GoQuote />
+                      <p>Duncan - <span>Tripadvisor</span></p>
+                    </div>
                 </div>
               </div>
             </div>
-          </SwiperSlide>
+          {/* </SwiperSlide>
           {/* <div className="slider-controler">
             <div className="swiper-button-prev slider-arrow">
               <HiArrowNarrowLeft />
@@ -121,7 +122,7 @@ export const Experience: React.FC<{}> = () =>{
               <HiArrowNarrowRight />
             </div>
           </div> */}
-        </Swiper>
+        {/* </Swiper> */}
       </div>
     </section>
   )
