@@ -47,13 +47,31 @@ export const Experience: React.FC<{}> = () =>{
 
       <div className="card-body">
         <Swiper
+        //   style={{
+        //   "--swiper-navigation-color": "#ccc",
+        //   "--swiper-pagination-color": "#ccc",
+        // }}
           // effect={'coverflow'}
+          // pagination={{el: '.swiper-pagination',clickable: true}}
+          navigation={true}
+          // navigation={{
+          //   nextEl: '.swiper-button-next',
+          //   prevEl: '.swiper-button-prev'
+          // }}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: true,
+          }}
+          speed={1000}
           grabCursor={true}
-          centeredSlides={true}
           loop={true}
+          // centeredSlides={true}
           // slidesPerView={'auto'}
           // navigation={true}
-          spaceBetween={45}
+          // spaceBetween={45}
           coverflowEffect={
             {
               rotate: 0,
@@ -62,15 +80,6 @@ export const Experience: React.FC<{}> = () =>{
               modifier: 2.5,
             }
           }
-          // pagination={{el: '.swiper-pagination',clickable: true}}
-          pagination={{
-            clickable: true,
-          }}
-          speed={800}
-          navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-          }}
           modules={[EffectCoverflow, Navigation, Pagination, Autoplay]}
           breakpoints={{
             '@0.00': {
@@ -87,10 +96,11 @@ export const Experience: React.FC<{}> = () =>{
             // },
             786: {
               slidesPerView: 2,
-              spaceBetween: 40,
+              spaceBetween: 80,
             },
-            992: {
+            1024: {
               slidesPerView: 1,
+              spaceBetween: 180,
             },
           }}
           className="swiper_container"
